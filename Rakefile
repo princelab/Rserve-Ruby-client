@@ -1,22 +1,28 @@
 # -*- ruby -*-
 $:.unshift(File.dirname(__FILE__)+"/lib")
 require 'rubygems'
-require 'hoe'
-require 'rserve'
-Hoe.plugin :git
+require 'bundler'
+begin 
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
+end
+require 'rake'
+require 'jeweler'
+
+Jeweler::Tasks.new do |gem|
+  gem.name = "rserve-client"
+  gem.homepage = "https://github.com/princelab/Rserve-Ruby-client"
+  gem.summary = %Q{Rserve for Ruby by Claudio Bustos (clbustos)}
+  gem.description = %Q{Rserve for Ruby, changed here because I just want to fix all my errors}
+  gem.add_runtime_dependency 'rserve'
+  gem.add_development_dependency 'rspec', '~> 2.0'
+end
+Jeweler::RubygemsDotOrgTasks.new
 
 require 'rspec'
 require 'rspec/core/rake_task'
-
-
-Hoe.spec 'rserve-client' do
-   self.testlib=:rspec
-   self.test_globs="spec/*_spec.rb"
-   self.version=Rserve::VERSION
-   self.rubyforge_name = 'ruby-statsample' # if different than 'rserve'
-   self.remote_rdoc_dir = "rserve-client"
-   self.developer('Claudio Bustos', 'clbustos_AT_gmail.com')
-   self.extra_dev_deps << ["rspec","~>2.0"]
-end
 
 # vim: syntax=ruby
