@@ -65,6 +65,7 @@ Gem::Specification.new do |s|
     "lib/rserve/talk.rb",
     "lib/rserve/withattributes.rb",
     "lib/rserve/withnames.rb",
+    "rserve-client.gemspec",
     "spec/rserve_connection_on_unix_spec.rb",
     "spec/rserve_connection_spec.rb",
     "spec/rserve_double_spec.rb",
@@ -126,7 +127,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
-      s.add_runtime_dependency(%q<rserve>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
     else
       s.add_dependency(%q<rake>, [">= 0"])
@@ -135,7 +135,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
-      s.add_dependency(%q<rserve>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
     end
   else
@@ -145,7 +144,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
-    s.add_dependency(%q<rserve>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
   end
 end
