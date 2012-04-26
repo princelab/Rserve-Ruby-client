@@ -17,6 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "https://github.com/princelab/Rserve-Ruby-client"
   gem.summary = %Q{Rserve for Ruby by Claudio Bustos (clbustos)}
   gem.description = %Q{Rserve for Ruby, changed here because I just want to fix all my errors}
+  gem.authors = ['Claudio Bustos']
   # REQUIRED but manually installed
   # gem.add_runtime_dependency 'rserve'
   gem.add_development_dependency 'rspec', '~> 2.0'
